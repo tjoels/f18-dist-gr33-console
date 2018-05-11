@@ -28,6 +28,14 @@ public class Client extends UnicastRemoteObject implements Runnable, Remote, Cli
     public void run() {
         Scanner scanner = new Scanner(System.in);
 
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            try {
+                chatServer.disconnectClient(name);
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        }));
+
         for ( ; ; ) {
             String message = scanner.nextLine();
 

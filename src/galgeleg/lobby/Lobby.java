@@ -31,11 +31,16 @@ public class Lobby {
             System.out.println("client exception: " + e);
             e.printStackTrace();
         }
+
     }
 
     private Boolean login(String username, String password) throws java.rmi.RemoteException {
         if (lobby.login(username, password)) {
-            new Thread(new Client(username, lobby)).start();
+            try {
+                new Thread(new Client(username, lobby)).start();
+            } catch (Exception e) {
+                System.out.println(e);
+            }
             return true;
         } else {
             System.err.println("Login failed. Try again. ");
