@@ -15,12 +15,15 @@ public class Lobby {
         try {
             lobby = (LobbyInterface) Naming.lookup("rmi://localhost:1076/galgeleg");
 
-            System.out.println("[System] Enter username: ");
-            String tempUsername = scanner.nextLine();
-            System.out.println("[System] Enter password: ");
-            String TempPassword = scanner.nextLine();
+            String tempUsername, tempPassword;
 
-            while(!login(tempUsername, TempPassword));
+            do {
+                System.out.println("[System] Enter username: ");
+                tempUsername = scanner.nextLine();
+                System.out.println("[System] Enter password: ");
+                tempPassword = scanner.nextLine();
+
+            } while(!login(tempUsername, tempPassword));
 
             System.out.println("\n[System] Client messenger is running");
 
