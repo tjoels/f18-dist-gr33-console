@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="gr33_galgeConsole:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/gr33_galgeConsole_jar</output-path>
+    <root id="archive" name="gr33_galgeConsole.jar">
+      <element id="module-output" name="GalgeConsole" />
+    </root>
+  </artifact>
+</component>
