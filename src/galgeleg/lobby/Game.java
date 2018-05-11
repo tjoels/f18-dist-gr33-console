@@ -92,6 +92,7 @@ public class Game {
                         System.out.println("Noget gik galt. Beklager!");
                         e.printStackTrace();
                     }
+                    break;
                 case "9":
                     try {
                         game.restart();
