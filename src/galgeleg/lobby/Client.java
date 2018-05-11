@@ -47,7 +47,7 @@ public class Client extends UnicastRemoteObject implements Runnable, Remote, Cli
                         e.printStackTrace();
                     }
                     break;
-                case "ExitConsole":
+                case ".ExitConsole":
                     try {
                         chatServer.disconnectClient(name);
                     } catch (RemoteException e) {
