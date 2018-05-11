@@ -23,6 +23,7 @@ public class Lobby {
                 tempUsername = scanner.nextLine();
                 System.out.println("[System] Enter password: ");
                 tempPassword = scanner.nextLine();
+                System.out.println("Loading - this can take a while. Please stand by with patience.");
 
             } while(!login(tempUsername, tempPassword));
 
