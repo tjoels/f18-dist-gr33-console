@@ -13,7 +13,7 @@ public class Lobby {
 
     public void Lobby () {
         try {
-            lobby = (LobbyInterface) Naming.lookup("rmi://localhost:1076/galgeleg");
+            lobby = (LobbyInterface) Naming.lookup("rmi://130.225.170.244:1076/galgeleg");
 
             String tempUsername, tempPassword;
 
